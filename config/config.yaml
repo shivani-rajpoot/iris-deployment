@@ -1,0 +1,21 @@
+project_name: iris_classifier
+random_state: 42
+test_size: 0.2
+
+data:
+  source: sklearn_iris
+  path: ""
+
+preprocessing:
+  scaler: standard
+
+model:
+  type: logistic_regression
+  params:
+    max_iter: 1000
+    solver: lbfgs
+
+output:
+  model_dir: artifacts/model
+  model_filename: model.joblib
+  metadata_filename: meta.json
